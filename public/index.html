@@ -1,10 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html ng-app="cozinhapp">
 <head>
-  <meta charset="UTF-8">
-  <title>Cozinhapp</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>Só de Cenoura Garçom</title>
+    <link rel="stylesheet" href="icons/material.css">
+    <link rel="stylesheet" href="css/materialize.min.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-  <h1>Hello World</h1>
+<body class="mdl-color--grey-100 mdl-color-text--grey-700 mdl-base">
+
+  <div ng-view></div>
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/materialize.min.js"></script>
+
+  <script src="lib/angular/angular.min.js"></script>
+  <script src="lib/angular-route/angular-route.min.js"></script>
+
+  <script src="js/main.js"></script>
+
+  <script src="js/controllers/PedidosController.js"></script>
+
 </body>
 </html>

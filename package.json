@@ -20,6 +20,11 @@
   },
   "homepage": "https://github.com/TL-Developer/cozinhapp",
   "dependencies": {
-    "express": "^4.13.4"
+    "body-parser": "^1.15.0",
+    "cookie-parser": "^1.4.1",
+    "express": "^4.13.4",
+    "express-load": "^1.1.15",
+    "method-override": "^2.3.5",
+    "mongoose": "^4.4.5"
   }
 }
