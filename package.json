@@ -1,0 +1,25 @@
+{
+  "name": "cozinhapp",
+  "version": "0.0.1",
+  "description": "Servidor de cozinha para aplicativos",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TL-Developer/cozinhapp.git"
+  },
+  "keywords": [
+    "cozinhapp"
+  ],
+  "author": "Tiago Lima <tiago.jlima@yahoo.com.br> (http://www.tldigitaldesigner.com.br)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TL-Developer/cozinhapp/issues"
+  },
+  "homepage": "https://github.com/TL-Developer/cozinhapp",
+  "dependencies": {
+    "express": "^4.13.4"
+  }
+}
