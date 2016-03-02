@@ -2,11 +2,14 @@ angular.module('cozinhapp').controller('PedidosController', ['$scope','$http', f
 
   $scope.pedidos = [];
 
-  $http.get('/pedidos').then(function(pedidos){
-    $scope.pedidos = pedidos.data;
-  }, function(erro){
-    console.log(erro);
-  });
+  function listaPedidos(){
+    $http.get('/pedidos').then(function(pedidos){
+      $scope.pedidos = pedidos.data;
+    }, function(erro){
+      console.log(erro);
+    });
+  }
+  listaPedidos();
 
   // REMOVE PEDIDO
   $scope.removePedido = function(pedido){
@@ -14,7 +17,7 @@ angular.module('cozinhapp').controller('PedidosController', ['$scope','$http', f
     $http.delete('/pedidos/' + pedido._id)
       .then(
          function(response){
-           console.log('Pedido removido com sucesso');
+          listaPedidos();
          },
          function(response){
            console.log('Não foi possível remover o pedido');
@@ -23,8 +26,8 @@ angular.module('cozinhapp').controller('PedidosController', ['$scope','$http', f
   };
 
   var socket = io();
-  socket.on('novoPedido', function(data){
-    alert('Novo pedido cadastrado');
+  socket.on('novoPedido', function(pedido){
+    listaPedidos();
   });
 
 }]);

@@ -8,10 +8,9 @@ module.exports = function(app){
 
     var pedido = req.body;
 
-    app.get('io').emit('novoPedido', pedido);
-
     Pedidos.create(pedido).then(function(pedido){
       res.status(201).json(pedido);
+      app.get('io').emit('novoPedido', pedido);
     },
     function(erro){
       console.log(erro);

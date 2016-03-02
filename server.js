@@ -3,7 +3,7 @@ var http = require('http').Server(app);
 var io = require('socket.io')(http);
 
 if(process.env.NODE_ENV == 'production'){
-  require('./config/database.js')('mongodb://tiago:admin@ds041154.mongolab.com:41154/cozinhapp');
+  require('./config/database.js')('mongodb://tiago:admin@ds019638.mlab.com:19638/cozinhapp');
 }else{
   require('./config/database.js')('mongodb://localhost/cozinhapp');
 }
