@@ -8,15 +8,8 @@ angular.module('cozinhapp').controller('PedidosController', ['$scope','$http', f
     console.log(erro);
   });
 
-
   // REMOVE PEDIDO
   $scope.removePedido = function(pedido){
-
-    var socket = io.connect('http://localhost:3000');
-    socket.on('removePedido', function (data) {
-      console.log(data);
-      socket.emit('my other event', { my: 'data' });
-    });
 
     $http.delete('/pedidos/' + pedido._id)
       .then(
@@ -27,7 +20,11 @@ angular.module('cozinhapp').controller('PedidosController', ['$scope','$http', f
            console.log('Não foi possível remover o pedido');
          }
       );
-
   };
+
+  var socket = io();
+  socket.on('novoPedido', function(data){
+    alert('Novo pedido cadastrado');
+  });
 
 }]);
