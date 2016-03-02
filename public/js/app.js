@@ -52,7 +52,7 @@ $('.scan-qrcode').on('click', function(){
 
 $('.acao-finalizar').on('click', function(){
   $.ajax({
-    url: 'http://cozinhapp.sergiolopes.org//novo-pedido',
+    url: 'http://cozinhapp.sergiolopes.org/novo-pedido',
     data: {
       mesa: $('#numero-mesa').val(),
       pedido: $('#resumo').text()

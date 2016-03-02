@@ -11,6 +11,14 @@ module.exports = function(){
       type: String,
       required: true
     },
+    hora: {
+      type: String,
+      required: true
+    },
+    data: {
+      type: String,
+      required: true
+    },
     created: {
       type: Date,
       default: Date.now
